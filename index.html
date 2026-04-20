@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Summarizer</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        input { width: 80%; padding: 10px; }
+        button { padding: 10px; cursor: pointer; }
+        #result { margin-top: 20px; padding: 15px; background: #f4f4f4; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>AI Link Summarizer</h2>
+    <input type="text" id="urlInput" placeholder="Paste link here (https://...)">
+    <button onclick="getSummary()">Summarize</button>
+    <div id="result">The summary will appear here...</div>
+
+    <script>
+        async function getSummary() {
+            const url = document.getElementById('urlInput').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerText = "Processing... (this can take 10-20 seconds)";
+
+            const response = await fetch('http://127.0.0.1:8000/summarize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url })
+            });
+
+            const data = await response.json();
+            resultDiv.innerText = data.summary || "Error: " + data.detail;
+        }
+    </script>
+</body>
+</html>
