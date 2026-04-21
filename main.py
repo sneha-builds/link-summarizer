@@ -8,6 +8,17 @@ app = FastAPI()
 
 # Load the summarization model (this might take a minute on first run)
 # We use 'distilbart' because it's fast and lightweight
+
+try:
+    summarizer = pipeline(
+        "text2text-generation", 
+        model="sshleifer/distilbart-cnn-12-6", 
+        framework="pt"
+    )
+    print("AI model loaded successfully!")
+except Exception as e:
+    print("Failed to load model: {e}")
+
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 
 class LinkRequest(BaseModel):
