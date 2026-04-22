@@ -38,7 +38,7 @@ A full-stack web application that extracts text from any provided URL and genera
     ```bash
     pip install fastapi uvicorn requests beautifulsoup4 transformers torch sentencepiece protobuf
 
-Running the Application
+## Running the Application
 
 1. Start the server:
 
