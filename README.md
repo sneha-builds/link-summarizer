@@ -49,9 +49,9 @@ A full-stack web application that extracts text from any provided URL and genera
    
 2. Access the UI:
 
-Open your browser and navigate to http://127.0.0.1:8000.
+ Open your browser and navigate to http://127.0.0.1:8000.
 
-4. First Run Note: The application will download the AI model (~1.2GB) on the first startup. Please wait until you see "Model loaded successfully!" in the terminal.
+3. First Run Note: The application will download the AI model (~1.2GB) on the first startup. Please wait until you see "Model loaded successfully!" in the terminal.
 
 ## How it Works
 
