@@ -6,7 +6,7 @@ A full-stack web application that extracts text from any provided URL and genera
 
 ##  Features
 - **Web Scraping:** Automatically extracts article content using BeautifulSoup4.
-- **AI-Powered:** Uses the `distilbart-cnn-12-6` Transformer model for high-quality abstractive summarization.
+- **AI-Powered:** Uses the `distilbart-cnn-12-6` Transformer model for high-quality abstractive summarization. 
 - **Modern Backend:** Built with FastAPI (Python 3.13+) for high-performance asynchronous API handling.
 - **Clean UI:** A minimalist, responsive frontend for easy user interaction.
 
